@@ -1,0 +1,155 @@
+ @import '../../style/common.wxss'; 
+
+page{
+  background-color: #fff;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 15px;
+}
+
+.weui-search-bar {
+  margin: 0px 10px;
+    position: relative;
+    padding: 5px 10px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #EFEFF4;
+    border-top: 1rpx solid #D7D6DC;
+    border-bottom: 1rpx solid #D7D6DC;
+    border-radius: 10px;
+}
+.weui-icon-search {
+    margin-right: 8px;
+    font-size:inherit;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 7px;
+}
+.weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    width: 14px;
+    height: 14px;
+}
+.weui-search-bar__text{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.weui-search-bar__form {
+    position: relative;
+    flex: auto;
+    border-radius: 5px;
+    background: #EFEFF4;
+    border: 1rpx solid #EFEFF4;
+}
+.weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.weui-search-bar__input {
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+.weui-icon-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 8px;
+    font-size: 0;
+}
+.weui-search-bar__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 3px;
+    text-align: center;
+    color: #9B9B9B;
+    background: #EFEFF4;
+    line-height: 28px;
+}
+.weui-search-bar__cancel-btn {
+    margin-left: 10px;
+    line-height: 28px;
+    color: #09BB07;
+    white-space: nowrap;
+}
+
+
+.placeholder {
+  margin-right: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.img-search-records {
+  height: 16px;
+  width: 16px;
+}
+.search-records-panel{
+  margin: 20px 15px;
+}
+.page-content{
+  padding: 0px;
+}
+.search-records-lable{
+  height: auto;
+}
+
+.weui-grids {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.records-weui-grid {
+  position: relative;
+  float: left;
+  margin: 0rpx 11.5rpx;
+  width: auto;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  min-width: 30%;
+}
+
+.weui-grid_active {
+  background-color: #ececec;
+}
+
+.weui-grid__icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto;
+}
+
+.weui-grid__label {
+  margin-bottom: 15px;
+  width: 100%;
+  float: left;
+  border: 1px solid #D7D6DC;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #EFEFF4;
+  line-height: 30px;
+  height: 30px;
+  font-weight: lighter;
+  font-size: 14px;
+}

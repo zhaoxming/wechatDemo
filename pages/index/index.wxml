@@ -1,0 +1,132 @@
+<!--index.wxml-->
+<view class='page'>
+  <view class='page-bd'>
+    <view class='page-content'>
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <image class="weui-icon-search_in-box" src='/images/home/search.png' size="14"></image>
+            <input type="text" disabled='true' class="weui-search-bar__input" placeholder="搜索城市/大学/公寓"  bindtap="toSearchTap" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+            </view>
+          </view>
+
+        </view>
+
+      </view>
+      <view class='city'>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder">热门租房城市</view>
+          </view>
+          <view class="placeholder" bindtap='toSwitchCity'>
+            <view class="weui-flex">
+              <view class="weui-flex__item">
+                <view class="all-tity">全部</view>
+              </view>
+              <view class="placeholder">
+                <image class='city-to-all' src='/images/home/to-all.png'></image>
+              </view>
+
+            </view>
+          </view>
+        </view>
+        <view class="weui-grids">
+          <block wx:for="{{cityGrids}}" wx:key="index">
+            <view url="" bindtap='toApartmentListTap' class="city-Weui-grid" hover-class="weui-grid_active" data-cityId='{{item.cityId}}'>
+              <view class="city-weui-grid__label" >{{item.nameCn}}</view>
+              <image class='city-img-grid' src='{{item.url}}'></image>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view class='country'>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder">热租特价公寓</view>
+          </view>
+
+        </view>
+        <view class='hot-apartments'>
+          <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+              <swiper-item style="width:1500px">
+                <block wx:for="{{item.swiperItem}}" wx:key="index">
+                  <view url="" bindtap='toApartmentListTap' class="country-Weui-grid" hover-class="weui-grid_active">
+                    <image src="{{item.img}}" class="slide-image" width="150" height="150" />
+                    <view class='swiper-item-desc_name'>{{item.name}}</view>
+                    <view class='swiper-item-desc_mark'>{{item.desc}}</view>
+                    <view class='swiper-item-desc_price'>{{item.price}}</view>
+                  </view>
+                </block>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+     <block wx:for="{{cityGrids}}" wx:key="index">
+            <view url="" bindtap='toApartmentListTap' class="city-Weui-grid" hover-class="weui-grid_active">
+              <view class="city-weui-grid__label">{{item.cityName}}</view>
+              <image class='city-img-grid' src='{{item.img}}'></image>
+            </view>
+          </block>
+  </scroll-view>
+</view>
+        <!--<view class="weui-grids">
+          <block wx:for="{{countryGrids}}" wx:key="id">
+            <view url="" bindtap='toApartmentListTap' class="country-Weui-grid" hover-class="weui-grid_active">
+              <view class="weui-grid__label">{{item.countryName}}</view>
+              <image class='country-img-grid' src='{{item.img}}'></image>
+
+            </view>
+          </block>
+        </view>  -->
+      </view>
+
+
+
+    </view>
+    <view class='foot-img'>
+      <image src='/images/home/gg.png'></image>
+    </view>
+    <view class="foot">
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="img-flex">
+            <image src="/images/home/order-free.png" class="img-foot" />
+          </view>
+          <view class="text-flex">
+            <text class="foot-text">超级低价</text>
+
+          </view>
+
+
+        </view>
+        <view class="weui-flex__item">
+          <view class="img-flex">
+            <image src="/images/home/real-apartments.png" class="img-foot" />
+          </view>
+          <view class="text-flex">
+            <text class="foot-text">真实房源</text>
+
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="img-flex">
+            <image src="/images/home/one-to-one.png" class="img-foot" />
+          </view>
+          <view class="text-flex">
+            <text class="foot-text">贴心服务</text>
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

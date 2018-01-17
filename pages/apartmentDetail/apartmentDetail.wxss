@@ -1,0 +1,359 @@
+/* pages/apartmentDetail/apartmentDetail.wxss */
+
+/* @import '../../style/common.wxss'; */
+
+page {
+  background-color: #efeff4;
+  font-size: 16px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.page-bd {
+  background-color: #fff;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+.weui-navbar__slider {
+  background-color: #f00;
+  width: 4.5rem;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #1bd1a5;
+}
+
+.address {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.apartment-address {
+  height: 30px;
+  margin: 15px;
+}
+
+.address-desc {
+  margin-left: 20px;
+  font-size: 16x;
+  height: 100%;
+  line-height: 30px;
+}
+
+.weui-tab-panner {
+  position: absolute;
+  height: auto;
+  margin-top: 8px;
+  background-color: #fff;
+  padding-bottom: 80px;
+  width: 100%;
+  border-top: 1rpx solid #ccc;
+}
+
+.weui-flex {
+  width: auto;
+  display: flex;
+  padding: 10px 10px 10px 20px;
+}
+
+.weui-flex__room-order {
+  width: auto;
+  display: flex;
+  padding-top: 3px;
+}
+
+.weui-flex-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.weui-flex-comment {
+  width: 100%;
+  text-align: center;
+  line-height: 48px;
+  color: #fff;
+}
+
+.weui-flex__item-footer {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding-left: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+swiper {
+  height: 240px;
+}
+
+.footer {
+  background: #f47983;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  height: 48px;
+}
+
+/*cart*/
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.weui-navbar__item {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 13px 0;
+  text-align: center;
+  font-size: 0;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #1aad19;
+}
+
+.weui-navbar__slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 6em;
+  height: 3px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.weui-navbar__title {
+  display: inline-block;
+  font-size: 15px;
+  max-width: 8em;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.weui-tab {
+  position: relative;
+  height: 100%;
+}
+
+.weui-tab__panel {
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 50px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.order-img {
+  width: 60px;
+  height: 60px;
+}
+
+.weui-media-box__thumb {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.weui-media-box__hd_in-appmsg {
+  margin-right: 0.8em;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.weui-media-box__bd_in-appmsg {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.weui-media-box_small-appmsg {
+  padding: 0;
+}
+
+.weui-media-box {
+  padding: 15px 0px 15px 15px;
+  position: relative;
+}
+
+.weui-media-box:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #e5e5e5;
+  color: #e5e5e5;
+  left: 15px;
+}
+
+.weui-media-box:first-child:before {
+  display: none;
+}
+
+.weui-media-box__title {
+  font-weight: 400;
+  font-size: 17px;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.weui-media-box__desc {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.weui-media-box__info {
+  margin-top: 15px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  color: #cecece;
+  line-height: 1em;
+  list-style: none;
+  overflow: hidden;
+}
+
+.weui-media-box__info__meta {
+  float: left;
+  padding-right: 1em;
+}
+
+.weui-media-box__info__meta_extra {
+  padding-left: 1em;
+  border-left: 1px solid #cecece;
+}
+
+.weui-media-box__title_in-text {
+  margin-bottom: 8px;
+}
+
+.weui-media-box_appmsg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-panel__bd {
+  margin-bottom: 10px;
+}
+
+.weui-media-box {
+  position: relative;
+  background-color: #fff;
+}
+
+.weui-media-box__desc__date {
+  font-size: 12px;
+  color: #f00;
+}
+
+.room-price {
+  font-size: 16px;
+  color: #f00;
+}
+
+.room-order-btn {
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+  min-width: 40px;
+  background-color: #f00;
+  font-size: 14px;
+  color: #fff;
+}
+
+.room-order-panel {
+  text-align: right;
+}
+
+.room-price-panel {
+  line-height: 14px;
+  padding-top: 10px;
+  width: 55%;
+}
+
+.pos {
+  position: absolute;
+  top: 10px;
+  left: 23px;
+  opacity: 0;
+}
+
+.icon_kf {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.dbtext {
+  line-height: 15px;
+  color: #666;
+  font-size: 12px;
+}
+
+.star {
+  height: 12px;
+  width: 12px;
+}
+
+textarea {
+  width: 100%;
+  display: block;
+  position: relative;
+  background: #e5e5e5;
+}
+
+.comment-textarea {
+  margin: 20px;
+}

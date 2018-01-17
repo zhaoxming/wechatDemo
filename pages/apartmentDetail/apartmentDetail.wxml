@@ -1,0 +1,200 @@
+<view class='page'>
+  <view class='page-bd'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{apartmentDetailInfo.imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='weui-flex'>
+
+      <view>
+        <image class='address' src='../../images/list/map.png' bindtap='toOpenLocationTap' data-address='{{apartmentDetailInfo.detailInfo.address}}'></image>
+      </view>
+
+
+      <view class="address-desc">
+        {{apartmentDetailInfo.detailInfo.address.name}}
+      </view>
+
+
+      <view>
+
+
+      </view>
+    </view>
+
+
+
+  </view>
+
+  <view class="weui-tab-panner">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="index">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <!-- 预定模块  -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class="weui-panel__bd">
+          <block wx:for="{{apartmentDetailInfo.roomList}}" wx:key="index">
+            <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{item.img}}" />
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{item.name}}</view>
+                <view class="weui-media-box__desc">{{item.desc}}</view>
+                <view class="weui-media-box__desc__date">{{item.checkDate}}起入住</view>
+                <view class="weui-media-box__desc">
+                  <view class='weui-flex__room-order'>
+                    <view class='weui-flex__item room-price-panel'>
+                      每周
+                      <text class='room-price'>{{item.price}}</text> 起
+
+                    </view>
+                    <view class="weui-flex__item-order" bindtap='toOrderRoomTap' data-checkDate='{{item.checkDate}}'>
+                      <view class='placeholder'>
+                        <button class='room-order-btn'>立即预定</button>
+                      </view>
+
+                    </view>
+
+
+                  </view>
+
+                </view>
+              </view>
+
+
+            </view>
+            <!-- <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">{{item.name}}</view>
+              <view class="weui-media-box__desc">{{item.desc}}</view>
+            </view> -->
+
+          </block>
+
+        </view>
+        <!-- 底部悬浮固定功能区  -->
+        <view class="footer">
+          <view class='weui-flex-footer'>
+            <view class="weui-flex__item-footer">
+              <view class="weui-flex">
+                <view class='button-image'>
+                  <view class="placeholder">
+                    <contact-button size="22" class='pos'></contact-button>
+                    <image class="icon_kf" src="/images/list/kefu.png"></image>
+
+                  </view>
+                </view>
+                <view class="weui-flex__item-footer">
+                  <view class="placeholder">在线客服</view>
+                </view>
+              </view>
+
+            </view>
+            <view class="weui-flex__item-footer">
+              <view class="weui-flex">
+                <view class='button-image'>
+                  <view class="placeholder">
+                    <image src="/images/list/tel.png" class="button-image" />
+                  </view>
+                </view>
+                <view class="weui-flex__item-footer">
+                  <view class="placeholder">拨打国内电话</view>
+                </view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <!-- 详情模块  -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{apartmentDetailInfo.name}}</view>
+          <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+          <view class="weui-media-box__desc">
+            <view>地址： {{apartmentDetailInfo.detailInfo.address.name}}
+              <image class='address' src='../../images/list/map.png' bindtap='toOpenLocationTap' data-address='{{apartmentDetailInfo.detailInfo.address}}'></image>
+            </view>
+          </view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+          <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+        </view>
+
+
+      </view>
+      <!-- 评论模块  -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+
+        <view class="weui-panel__bd">
+          <block wx:for="{{apartmentDetailInfo.roomList}}" wx:key="index">
+
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">{{item.name}}</view>
+              <view class="weui-media-box__desc">{{item.desc}}</view>
+            </view>
+
+          </block>
+
+        </view>
+        <!-- 底部悬浮固定功能区  -->
+        <view class="footer">
+          <view class='weui-flex-comment' bindtap='toCommentActionSheetTap'>
+            <label>我要评论</label>
+
+          </view>
+        </view>
+        <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="placeholder">微信匿名</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">
+                <checkbox value="" checked="" />是否匿名</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">
+                <button>确定</button>
+              </view>
+            </view>
+          </view>
+          <view class="weui-flex">
+            <view>
+              <view class="placeholder">评分</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="placeholder">
+                <block>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+
+                </block>
+              </view>
+            </view>
+
+          </view>
+          <view class='comment-textarea'>
+            <textarea class="weui-textarea" name="remark" placeholder="请填写备注信息" style="height: 8em" />
+          </view>
+
+        </action-sheet>
+      </view>
+    </view>
+  </view>
+
+
+</view>

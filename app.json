@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/userInfo/userInfo",
+    "pages/logs/logs",
+    "pages/switchcity/switchcity",
+    "pages/search/search",
+    "pages/myOrder/myOrder",
+    "pages/myCollection/myCollection",
+    "pages/aboutUs/aboutUs",
+    "pages/recommendFriends/recommendFriends",
+    "pages/apartmentDetail/apartmentDetail",
+    "pages/apartmentList/apartmentList",
+    "pages/map/map",
+    "pages/preOrder/preOrder"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "英窝窝",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#C0C0C0"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabs/home.png",
+        "selectedIconPath": "images/tabs/home-selected.png"
+      },
+     
+      {
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "我的",
+        "iconPath": "images/tabs/my.png",
+        "selectedIconPath": "images/tabs/my-selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

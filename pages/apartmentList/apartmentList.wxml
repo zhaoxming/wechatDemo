@@ -1,0 +1,96 @@
+<view class='page'>
+  <view class='page-bd'>
+    <view class="weui-panel weui-panel_access">
+      <!-- <view class="weui-panel__hd">图文组合列表</view> -->
+      <view class="weui-panel__bd">
+        <block wx:for="{{apartmentList}}" wx:key="index" wx-for-item="item">
+          <view class="weui-media-box weui-media-box_appmsg" hover-class="">
+
+            <view bindtap='toApartmentDetailTap' class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <view class='pannel-img-upon'>€
+                <text class='price'>{{item.price}}</text>起/周</view>
+              <view class='pannel-img-downon'>
+                <text class=''>前往伦敦大学：</text>
+                <image class="texi" src="/images/list/car.png" />
+                <text class='price'></text>10分钟
+                <image class="walk" src="/images/list/walking.png" />
+                <text class='price'></text>19分钟
+
+              </view>
+              <image class="weui-media-box__thumb" src="{{item.img}}" />
+
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">
+                <view class="weui-flex">
+                  <view class="weui-flex__item">
+                    <view class="placeholder">{{item.name}}</view>
+                  </view>
+                  <view class="">
+
+                    <view class='weui-grid__label' bindtap=''>{{item.label}}</view>
+
+                  </view>
+                </view>
+              </view>
+              <view class="weui-media-box__desc">
+
+                <block wx:if='{{item.starNum == 1}}'>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+
+                </block>
+                <block wx:elif="{{item.starNum == 2}}">
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+
+                </block>
+                <block wx:elif="{{item.starNum == 3 }}">
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+
+                </block>
+                <block wx:elif="{{item.starNum == 4 }}">
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+
+                </block>
+                <block wx:elif="{{item.starNum  == 5}}">
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+                  <image class='star' src='/images/list/icon-small-star-checked.png'></image>
+
+                </block>
+                <block wx:else="ture">
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+                  <image class='star' src='/images/list/icon-small-star.png'></image>
+
+                </block>
+              </view>
+            </view>
+          </view>
+        </block>
+
+      </view>
+
+    </view>
+  </view>
+
+</view>
